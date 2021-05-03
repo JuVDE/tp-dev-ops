@@ -43,7 +43,6 @@ describe('Component Tests', () => {
       // THEN
       expect(service.query).toHaveBeenCalled();
       expect(comp.operations[0]).toEqual(jasmine.objectContaining({ id: 123 }));
-      expect(false).toBe(true);
     });
 
     it('should load a page', () => {
