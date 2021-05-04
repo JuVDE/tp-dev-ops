@@ -46,7 +46,8 @@ jobs:
         run: npm run ci:e2e:run
       - name: Fin docker et nettoyage
         run: npm run ci:e2e:teardown
-
+      - name: Heroku
+        run: ./mvnw -ntp com.heroku.sdk:heroku-maven-plugin:2.0.5:deploy -DskipTests -Pprod -Dheroku.buildpacks=heroku/jvm -Dheroku.appName=ju-vde
         
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
